@@ -2,6 +2,8 @@
 This is a image captioning project from sratch 
 
 Here for the alignment model i will be using this architecture
+
+```plaintext
          +-------------------+        +-------------------+
          |    Input Image    |        |    Input Caption  |
          +-------------------+        +-------------------+
@@ -36,3 +38,4 @@ Here for the alignment model i will be using this architecture
                         +------------------+
                         | Contrastive Loss |
                         +------------------+
+```
