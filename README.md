@@ -1,14 +1,27 @@
-# Image_Captioning_FLickr32k
-This is a image captioning project from sratch 
+# Image Captioning FLickr32k
 
-Here for the alignment model i will be using this architecture
+This is an image and embedding alignment project which can be used to retrieve images using texts.
+We are fine-tuning the **BERT and ViT transformer** 
+
+`main_ca_old.py` has the one which will run to get Cross attention and with cls embedding 
+to get the mean embedding you can change the `train_ca_mean.py` to `trainerca.py`
+
+`main.py` has the one which does not have cross attention layer the diagram below depicts its architecture.
+Similarly, here we can change the `train_ca_mean.py` to `trainerca.py`
+
+`main_ca_LoRA` is the file which can be run to finetune using LoRA. Peft technique
+
+`main_ca` this file has the cross attention layer with the cls embedding.
+
+
+Here for the alignment model I will be using this architecture
 
 ```plaintext
          +-------------------+        +-------------------+
          |    Input Image    |        |    Input Caption  |
          +-------------------+        +-------------------+
                     |                           |
-           [Preprocessing]             [Tokenization]
+             [Preprocessing]              [Tokenization]
                     |                           |
                     V                           V
          +-------------------+        +-------------------+
@@ -31,7 +44,7 @@ Here for the alignment model i will be using this architecture
                                 |   |
                                 V   V
                         +------------------+
-                        |  Similarity Matrix|
+                        | Similarity Matrix |
                         |(cosine similarity)|
                         +------------------+
                                 |
