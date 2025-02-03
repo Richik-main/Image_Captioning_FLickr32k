@@ -52,3 +52,9 @@ Here for the alignment model I will be using this architecture
                         | Contrastive Loss |
                         +------------------+
 ```
+
+This is the first architechture and in the next one we used a cross attention on both the images being attented by text and text attending images to make embeddings further aligned. 
+
+Everything about the project can be find clearly crafted and presented in this vlog.
+
+https://medium.com/@shreya.sahay/csci-6527-initial-project-report-caption-to-image-retrieval-using-vision-transformers-5203b6399aed
